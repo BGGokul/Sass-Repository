@@ -164,7 +164,7 @@ a {
 .badge, .badge-multi, .badge-primary {
   padding: 0 10px;
   border-radius: 5px;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
 }
 
 .badge-multi {
@@ -1361,7 +1361,7 @@ a {
 @media only screen and (max-width: 576px) {
   .technology-area .technology-items .technology-item:hover:last-child::after {
     font-size: 1.5rem;
-    content: "";
+    content: "";
     top: 100.1%;
     left: 0;
   }
@@ -1421,7 +1421,7 @@ a {
 
 @media only screen and (max-width: 576px) {
   .cards-heading h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem !important;
   }
 }
 
@@ -1621,6 +1621,12 @@ footer {
   background-color: #4154f1;
   color: #fff;
   text-align: center;
+}
+
+@media only screen and (max-width: 576px) {
+  footer {
+    padding: 1rem 0;
+  }
 }
 
 footer h3 {
