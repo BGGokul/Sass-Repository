@@ -1,0 +1,46 @@
+@use "../abstract/mixins";
+.contact-area {
+  background-color: rgb(224, 224, 224);
+  padding: 3rem 6rem;
+  @include responsive(xs) {
+    padding: 1rem;
+  }
+
+  .contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: #fff;
+    @include responsive(xs) {
+      padding: 1rem;
+      flex-direction: column;
+    }
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      color: gray;
+      line-height: 2;
+      font-size: smaller;
+    }
+    .contact-form {
+      flex-grow: 1;
+      @include responsive(xs) {
+        width: 100%;
+      }
+      .contact-button {
+        @include responsive(xs) {
+          text-align: center;
+        }
+      }
+    }
+
+    img {
+      width: 400px;
+      height: auto;
+    }
+  }
+}

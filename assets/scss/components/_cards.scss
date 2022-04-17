@@ -1,0 +1,87 @@
+@use "../abstract/variable";
+@use "../abstract/mixins";
+.cards {
+  padding: 3rem 5rem;
+  background-color: map-get($map: $theme-colors, $key: primary);
+  @include responsive(xs) {
+    padding: 1rem;
+  }
+  &-heading {
+    text-align: center;
+    h2 {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 2rem;
+      @include responsive(xs) {
+        font-size: 1.3rem !important;
+      }
+    }
+    p {
+      margin-top: 10px;
+      color: #e9e9e9;
+      @include responsive(xs) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+.details-cards {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include responsive(xs) {
+    flex-direction: column;
+  }
+
+  a {
+    color: #333;
+    @include responsive(xs) {
+      margin-top: 20px;
+    }
+  }
+
+  .details-card {
+    background-color: #fff;
+    max-width: 350px;
+    border-radius: 10px;
+    .card-img {
+      width: 100%;
+      height: 250px;
+      text-align: center;
+    }
+
+    &:hover {
+      box-shadow: 2px 2px 20px 5px rgba(45, 25, 117, 0.9);
+      transition: 500ms;
+    }
+  }
+}
+.deatils-card__content {
+  padding: 10px 25px;
+  h5 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 12px;
+    color: gray;
+    line-height: 2;
+  }
+}
+
+.more-course {
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 2px;
+  @include responsive(xs) {
+    font-size: 10px;
+  }
+  a {
+    color: #fff;
+    &:hover {
+      transition: 500ms;
+      color: #ffca28;
+    }
+  }
+}

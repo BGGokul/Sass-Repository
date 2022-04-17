@@ -1,0 +1,18 @@
+@use "../abstract/variable";
+.form-control {
+  padding: 0.5rem 1rem;
+  background-color: rgb(244, 244, 244);
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+
+  &:focus {
+    transition: 50ms;
+    border: 2px solid map-get($map: $theme-colors, $key: primary);
+  }
+}
+
+.resize-none {
+  resize: none;
+}

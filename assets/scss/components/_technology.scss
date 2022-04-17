@@ -1,0 +1,140 @@
+@use "../abstract/variable";
+@use "../abstract/mixins";
+.technology-area {
+  padding: 3rem 5em;
+  @include responsive(xs) {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  &__heading {
+    text-align: center;
+    h2 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      @include responsive(xs) {
+        font-size: 1.4rem;
+      }
+    }
+    p {
+      margin-top: 10px;
+      color: gray;
+    }
+  }
+
+  .technology-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+    @include responsive(xs) {
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    .technology-item {
+      padding: 5rem 4rem;
+      text-align: center;
+      max-width: 400px;
+      position: relative;
+      cursor: pointer;
+      filter: grayscale(100%);
+      @include responsive(xs) {
+        padding: 2rem;
+      }
+
+      &:hover {
+        filter: grayscale(0%);
+        transition: 500ms;
+      }
+
+      &_text {
+        margin-top: 3rem;
+        h5 {
+          font-size: 1.3rem;
+          font-weight: 600;
+        }
+        p {
+          margin-top: 15px;
+          color: grey;
+          line-height: 1.3;
+          font-size: 14px;
+        }
+      }
+      &:hover h5 {
+        color: map-get($map: $theme-colors, $key: primary);
+      }
+      &:not(:last-child):before {
+        position: absolute;
+        top: 35%;
+        right: 0;
+        line-height: 1;
+        font-size: 2rem;
+        font-weight: 800;
+        content: "";
+        font-family: "font Awesome 5 free";
+        z-index: 1;
+        color: #444;
+        @include responsive(xs) {
+          font-size: 1.5rem;
+          content: "";
+          top: 95%;
+          left: 0;
+        }
+      }
+
+      &:hover:not(:last-child):before {
+        right: -10px;
+        color: blue;
+        transition: 1s;
+        @include responsive(xs) {
+          right: 0;
+          top: 100.1%;
+        }
+      }
+      &:hover:last-child::after {
+        position: absolute;
+        top: 35%;
+        right: 0;
+        color: #ffca28;
+        transition: 1s;
+        line-height: 1;
+        font-size: 2rem;
+        font-weight: 800;
+        content: "";
+        font-family: "Font Awesome 6 Free";
+        z-index: 1;
+        @include responsive(xs) {
+          font-size: 1.5rem;
+          content: "";
+          top: 100.1%;
+          left: 0;
+        }
+      }
+    }
+    .technology-img {
+      position: relative;
+      height: 80px;
+      width: 80px;
+      margin: 0 auto;
+      img {
+        margin: 15px auto;
+        width: 60px;
+        height: 60px;
+      }
+      &:hover::after {
+        animation: rotate 4s linear infinite;
+      }
+      &::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -3px;
+        border-radius: 50%;
+        border: 5px dotted blue;
+        content: "";
+      }
+    }
+  }
+}

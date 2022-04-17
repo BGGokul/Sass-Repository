@@ -1,0 +1,207 @@
+@use "../abstract/variable";
+@use "../abstract/mixins";
+
+// hero section
+.hero-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3.65rem;
+
+  @include responsive(xs) {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  &__contents {
+    max-width: 35rem;
+    .btn-part {
+      @include responsive(xs) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 1.65;
+    @include responsive(xs) {
+      font-size: 1rem;
+    }
+  }
+
+  &__desc {
+    font-size: 1rem;
+    margin-top: 20px;
+    line-height: 1.7;
+    font-weight: 500;
+    @include responsive(xs) {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+// background animations
+.background-shapes {
+  @include responsive(xs) {
+    display: none;
+  }
+  .box-1 {
+    width: 13px;
+    height: 13px;
+    border-radius: 40%;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(360deg);
+    top: 20%;
+    background-color: transparent;
+    border: 2px solid map-get($map: $theme-colors, $key: primary);
+    animation: rotate linear 5s infinite;
+  }
+  .box-2 {
+    width: 13px;
+    height: 13px;
+    top: 80%;
+    left: 55%;
+    border-radius: 40%;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(360deg);
+    background-color: transparent;
+    border: 2px solid map-get($map: $theme-colors, $key: green-c);
+    animation: rotate linear 5s infinite;
+  }
+  .box-3 {
+    width: 13px;
+    height: 13px;
+    top: 20%;
+    right: 10%;
+    border-radius: 40%;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(360deg);
+    background-color: transparent;
+    border: 2px solid map-get($map: $theme-colors, $key: yellow-c);
+    animation: rotate linear 5s infinite;
+  }
+  .dot-1 {
+    width: 5px;
+    height: 5px;
+    top: 76%;
+    right: 6%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(360deg);
+    background-color: map-get($map: $theme-colors, $key: red-c);
+    animation: rotate linear 5s infinite;
+  }
+  .dot-2 {
+    width: 5px;
+    height: 5px;
+    top: 50%;
+    left: 2%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(360deg);
+    background-color: map-get($map: $theme-colors, $key: dark);
+    animation: rotate linear 5s infinite;
+  }
+  .dot-3 {
+    width: 5px;
+    height: 5px;
+    top: 20%;
+    right: 60%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(360deg);
+    background-color: map-get($map: $theme-colors, $key: yellow-c);
+    animation: rotate linear 5s infinite;
+  }
+  .dot-4 {
+    width: 5px;
+    height: 5px;
+    top: 90%;
+    left: 20%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(360deg);
+    background-color: map-get($map: $theme-colors, $key: pink-c);
+    animation: rotate linear 5s infinite;
+  }
+  .heart-1 {
+    top: 15%;
+    left: 20%;
+    color: map-get($map: $theme-colors, $key: pink-c);
+    position: absolute;
+    z-index: -1;
+    transform: rotate(360deg);
+    animation: rotate linear 5s infinite;
+  }
+  .heart-2 {
+    top: 40%;
+    left: 50%;
+    color: map-get($map: $theme-colors, $key: yellow-c);
+    position: absolute;
+    z-index: -1;
+    transform: rotate(360deg);
+    animation: rotate linear 5s infinite;
+  }
+  .heart-3 {
+    top: 90%;
+    left: 44%;
+    color: map-get($map: $theme-colors, $key: pink-c);
+    position: absolute;
+    z-index: -1;
+    transform: rotate(360deg);
+    animation: rotate linear 5s infinite;
+  }
+  .heart-4 {
+    bottom: 10%;
+    left: 90%;
+    color: map-get($map: $theme-colors, $key: yellow-c);
+    position: absolute;
+    z-index: -1;
+    transform: rotate(360deg);
+    animation: rotate linear 5s infinite;
+  }
+  .flower-1 {
+    bottom: 10%;
+    left: 5%;
+    color: map-get($map: $theme-colors, $key: primary);
+    position: absolute;
+    z-index: -1;
+    transform: rotate(360deg);
+    animation: rotate linear 5s infinite;
+  }
+  .flower-2 {
+    bottom: 10%;
+    left: 66%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(360deg);
+    animation: rotate linear 5s infinite;
+  }
+  .flower-3 {
+    bottom: 80%;
+    right: 51%;
+    color: map-get($map: $theme-colors, $key: red-c);
+    position: absolute;
+    z-index: -1;
+    transform: rotate(360deg);
+    animation: rotate linear 5s infinite;
+  }
+  .flower-4 {
+    bottom: 55%;
+    left: 40%;
+    color: map-get($map: $theme-colors, $key: green-c);
+    position: absolute;
+    z-index: -1;
+    transform: rotate(360deg);
+    animation: rotate linear 5s infinite;
+  }
+}

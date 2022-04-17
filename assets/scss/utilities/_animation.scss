@@ -1,0 +1,45 @@
+@keyframes color-change {
+  0% {
+    color: #42a5f5;
+  }
+  25% {
+    color: #ef5350;
+  }
+  50% {
+    color: #ff54a1;
+  }
+  75% {
+    color: #5c6bc0;
+  }
+  100% {
+    color: #34a853;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bg-change {
+  0% {
+    background-color: #42a5f5;
+  }
+  25% {
+    background-color: #ef5350;
+  }
+  50% {
+    background-color: #ff54a1;
+  }
+  75% {
+    background-color: #5c6bc0;
+  }
+  100% {
+    background-color: #34a853;
+  }
+}

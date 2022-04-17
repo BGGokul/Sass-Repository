@@ -1,0 +1,40 @@
+@use "../abstract/variable";
+@use "../abstract/mixins";
+.about-area {
+  background-color: map-get($map: $theme-colors, $key: primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3.65rem 6rem;
+
+  @include responsive(xs)
+  {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  &__img {
+    width: 35rem;
+  }
+  &__contents {
+    color: #fff;
+      @include responsive(xs) {
+        padding: 0.5rem !important;
+      }
+
+    h2 {
+      font-size: 2.2rem;
+        @include responsive(xs) {
+          font-size: 1.35rem;
+        }
+    }
+    p {
+      line-height: 1.6;
+      color: #e9e9e9;
+        @include responsive(xs) {
+          margin-top: 0.5rem;
+         font-size: 12px;
+        }
+    }
+  }
+}
