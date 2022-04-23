@@ -11,13 +11,21 @@
   @include responsive(xs) {
     padding: 1rem;
     flex-direction: column;
+    height: 100vh;
+  }
+  @include responsive(sm) {
+    padding: 3rem;
+    flex-direction: column;
   }
 
   &__contents {
     max-width: 35rem;
-    .btn-part {
+    .hero-btn-part {
       @include responsive(xs) {
         text-align: center;
+      }
+      @include responsive(sm) {
+        text-align: center !important;
       }
     }
   }
@@ -28,6 +36,9 @@
     @include responsive(xs) {
       font-size: 1rem;
     }
+    @include responsive(sm) {
+      font-size: 1.2rem;
+    }
   }
 
   &__desc {
@@ -36,6 +47,9 @@
     line-height: 1.7;
     font-weight: 500;
     @include responsive(xs) {
+      font-size: 0.8rem;
+    }
+    @include responsive(sm) {
       font-size: 0.8rem;
     }
   }

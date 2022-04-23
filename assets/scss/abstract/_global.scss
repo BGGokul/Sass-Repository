@@ -26,8 +26,12 @@
   text-align: center;
   cursor: pointer;
   @include responsive(xs) {
-    padding: 0.6rem 1rem;
-    font-size: 0.7rem;
+    padding: 0.4rem;
+    font-size: 10px;
+  }
+  @include responsive(sm) {
+    padding: 0.4rem;
+    font-size: 10px;
   }
 
   &-primary {
@@ -66,6 +70,12 @@
     color: #fff;
 
     @include responsive(xs) {
+      font-size: 1rem;
+      animation: color-change 10s infinite;
+      padding: 0;
+    }
+
+    @include responsive(sm) {
       font-size: 1rem;
       animation: color-change 10s infinite;
       padding: 0;

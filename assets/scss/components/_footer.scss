@@ -8,10 +8,16 @@ footer {
   @include responsive(xs) {
     padding: 1rem 0;
   }
+  @include responsive(sm) {
+    padding: 1rem 0;
+  }
 
   h3 {
     font-size: 1.5rem;
     @include responsive(xs) {
+      display: none;
+    }
+    @include responsive(sm) {
       display: none;
     }
   }

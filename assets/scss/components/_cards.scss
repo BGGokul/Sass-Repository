@@ -6,6 +6,9 @@
   @include responsive(xs) {
     padding: 1rem;
   }
+  @include responsive(sm) {
+    padding: 1rem;
+  }
   &-heading {
     text-align: center;
     h2 {
@@ -15,12 +18,18 @@
       @include responsive(xs) {
         font-size: 1.3rem !important;
       }
+      @include responsive(sm) {
+        font-size: 1.3rem !important;
+      }
     }
     p {
       margin-top: 10px;
       color: #e9e9e9;
       @include responsive(xs) {
-        font-size: 14px;
+        font-size: 13px;
+      }
+      @include responsive(sm) {
+        font-size: 13px;
       }
     }
   }
@@ -39,6 +48,9 @@
     @include responsive(xs) {
       margin-top: 20px;
     }
+    @include responsive(sm) {
+      padding: 0 10px;
+    }
   }
 
   .details-card {
@@ -49,6 +61,9 @@
       width: 100%;
       height: 250px;
       text-align: center;
+      @include responsive(sm) {
+        height: auto;
+      }
     }
 
     &:hover {
@@ -61,11 +76,19 @@
   padding: 10px 25px;
   h5 {
     font-size: 1.3rem;
+    @include responsive(sm) {
+      font-size: 15px;
+      text-align: center;
+    }
   }
   p {
     font-size: 12px;
     color: gray;
     line-height: 2;
+    @include responsive(sm) {
+      font-size: 10px;
+      line-height: 1.5;
+    }
   }
 }
 
@@ -75,6 +98,9 @@
   font-size: 13px;
   letter-spacing: 2px;
   @include responsive(xs) {
+    font-size: 10px;
+  }
+  @include responsive(sm) {
     font-size: 10px;
   }
   a {

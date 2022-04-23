@@ -11,6 +11,9 @@
   @include responsive(xs) {
     padding: 1rem;
   }
+  @include responsive(sm) {
+    padding: 0.5rem 1rem;
+  }
 
   &__logo {
     color: map-get($map: $theme-colors, $key: primary);
@@ -18,12 +21,18 @@
     @include responsive(xs) {
       font-size: 20px;
     }
+    @include responsive(sm) {
+      font-size: 15px;
+    }
   }
   .mobile-navbar {
     display: none;
     font-size: medium;
     @include responsive(xs) {
       display: block;
+    }
+    @include responsive(sm) {
+      display: none;
     }
   }
 
@@ -42,6 +51,12 @@
       text-transform: uppercase;
       font-weight: 700;
       color: map-get($map: $theme-colors, $key: dark);
+      @include responsive(xs) {
+        font-size: 10px;
+      }
+      @include responsive(sm) {
+        font-size: 10px;
+      }
 
       &:hover {
         color: map-get($map: $theme-colors, $key: primary-hover);

@@ -6,6 +6,9 @@
     padding: 1rem;
     flex-direction: column;
   }
+  @include responsive(sm) {
+    padding: 1rem;
+  }
 
   &__heading {
     text-align: center;
@@ -13,6 +16,9 @@
       font-size: 2rem;
       text-transform: uppercase;
       @include responsive(xs) {
+        font-size: 1.4rem;
+      }
+      @include responsive(sm) {
         font-size: 1.4rem;
       }
     }
@@ -31,6 +37,9 @@
       flex-direction: column;
       padding: 1rem;
     }
+    @include responsive(sm) {
+      padding: 1rem;
+    }
 
     .technology-item {
       padding: 5rem 4rem;
@@ -41,6 +50,9 @@
       filter: grayscale(100%);
       @include responsive(xs) {
         padding: 2rem;
+      }
+      @include responsive(sm) {
+        padding: 0;
       }
 
       &:hover {
@@ -81,6 +93,12 @@
           top: 95%;
           left: 0;
         }
+        @include responsive(sm) {
+          font-size: 1.5rem;
+          content: "";
+          top: 35%;
+          right: 0;
+        }
       }
 
       &:hover:not(:last-child):before {
@@ -90,6 +108,9 @@
         @include responsive(xs) {
           right: 0;
           top: 100.1%;
+        }
+        @include responsive(sm) {
+          right: -10px;
         }
       }
       &:hover:last-child::after {
@@ -109,6 +130,12 @@
           content: "";
           top: 100.1%;
           left: 0;
+        }
+        @include responsive(sm) {
+          font-size: 1.5rem;
+          content: "";
+          top: 35%;
+          right: 0;
         }
       }
     }

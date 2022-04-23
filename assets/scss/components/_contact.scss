@@ -5,6 +5,9 @@
   @include responsive(xs) {
     padding: 1rem;
   }
+  @include responsive(sm) {
+    padding: 1rem;
+  }
 
   .contact-card {
     display: flex;
@@ -16,6 +19,9 @@
     @include responsive(xs) {
       padding: 1rem;
       flex-direction: column;
+    }
+    @include responsive(sm) {
+      padding: 1rem;
     }
     h4 {
       font-size: 1.2rem;

@@ -7,10 +7,12 @@
   align-items: center;
   padding: 3.65rem 6rem;
 
-  @include responsive(xs)
-  {
+  @include responsive(xs) {
     flex-direction: column;
     padding: 1rem;
+  }
+  @include responsive(sm) {
+    padding: 3rem;
   }
 
   &__img {
@@ -18,23 +20,30 @@
   }
   &__contents {
     color: #fff;
-      @include responsive(xs) {
-        padding: 0.5rem !important;
-      }
+    @include responsive(xs) {
+      padding: 0.5rem !important;
+    }
 
     h2 {
       font-size: 2.2rem;
-        @include responsive(xs) {
-          font-size: 1.35rem;
-        }
+      @include responsive(xs) {
+        font-size: 1.35rem;
+      }
+      @include responsive(sm) {
+        font-size: 1.35rem;
+      }
     }
     p {
       line-height: 1.6;
       color: #e9e9e9;
-        @include responsive(xs) {
-          margin-top: 0.5rem;
-         font-size: 12px;
-        }
+      @include responsive(xs) {
+        margin-top: 0.5rem;
+        font-size: 12px;
+      }
+      @include responsive(sm) {
+        margin-top: 0.5rem;
+        font-size: 12px;
+      }
     }
   }
 }
