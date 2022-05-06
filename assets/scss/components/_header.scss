@@ -14,6 +14,9 @@
   @include responsive(sm) {
     padding: 0.5rem 1rem;
   }
+  @include responsive(md) {
+    padding: 0.5rem 1rem;
+  }
 
   &__logo {
     color: map-get($map: $theme-colors, $key: primary);

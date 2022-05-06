@@ -841,6 +841,12 @@ a {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: 0.5rem 1rem;
+  }
+}
+
 .header__logo {
   color: #4154f1;
   -webkit-animation: color-change 10s infinite;
@@ -957,6 +963,16 @@ a {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .hero-area {
+    padding: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .hero-area__contents {
   max-width: 35rem;
 }
@@ -1010,6 +1026,12 @@ a {
 }
 
 @media only screen and (max-width: 576px) {
+  .background-shapes {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   .background-shapes {
     display: none;
   }
@@ -1247,6 +1269,12 @@ a {
 @media only screen and (min-width: 576px) {
   .about-area {
     padding: 3rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .about-area {
+    padding: 1rem;
   }
 }
 

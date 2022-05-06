@@ -17,6 +17,10 @@
     padding: 3rem;
     flex-direction: column;
   }
+  @include responsive(md) {
+    padding: 1rem;
+    flex-direction: column;
+  }
 
   &__contents {
     max-width: 35rem;
@@ -58,6 +62,9 @@
 // background animations
 .background-shapes {
   @include responsive(xs) {
+    display: none;
+  }
+  @include responsive(md) {
     display: none;
   }
   .box-1 {

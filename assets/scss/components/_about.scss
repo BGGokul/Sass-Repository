@@ -14,6 +14,9 @@
   @include responsive(sm) {
     padding: 3rem;
   }
+  @include responsive(md) {
+    padding: 1rem;
+  }
 
   &__img {
     width: 35rem;
