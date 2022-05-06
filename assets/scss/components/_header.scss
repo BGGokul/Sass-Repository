@@ -7,6 +7,7 @@
   padding: 0.75rem 2rem;
   align-items: center;
   border-bottom: 0.1px solid #efefef;
+  background-color: #fff;
   text-transform: uppercase;
   @include responsive(xs) {
     padding: 1rem;
@@ -19,6 +20,7 @@
   }
   @include responsive(lg) {
     padding: 0.75rem 2rem;
+    position: relative;
   }
   @include responsive(xl) {
     padding: 0.75rem 2rem;
