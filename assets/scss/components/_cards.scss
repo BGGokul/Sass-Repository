@@ -9,6 +9,9 @@
   @include responsive(sm) {
     padding: 1rem;
   }
+  @include responsive(lg) {
+    padding: 1rem;
+  }
   &-heading {
     text-align: center;
     h2 {
@@ -21,6 +24,9 @@
       @include responsive(sm) {
         font-size: 1.3rem !important;
       }
+      @include responsive(sm) {
+        font-size: 1.8rem !important;
+      }
     }
     p {
       margin-top: 10px;
@@ -30,6 +36,9 @@
       }
       @include responsive(sm) {
         font-size: 13px;
+      }
+      @include responsive(sm) {
+        font-size: 15px;
       }
     }
   }
@@ -80,6 +89,10 @@
       font-size: 15px;
       text-align: center;
     }
+    @include responsive(lg) {
+      font-size: 20px;
+      text-align: center;
+    }
   }
   p {
     font-size: 12px;
@@ -88,6 +101,10 @@
     @include responsive(sm) {
       font-size: 10px;
       line-height: 1.5;
+    }
+    @include responsive(lg) {
+      font-size: 13px;
+      line-height: 2;
     }
   }
 }

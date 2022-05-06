@@ -33,6 +33,10 @@
     padding: 0.4rem;
     font-size: 10px;
   }
+  @include responsive(lg) {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 
   &-primary {
     @extend .btn;
@@ -77,6 +81,11 @@
 
     @include responsive(sm) {
       font-size: 1rem;
+      animation: color-change 10s infinite;
+      padding: 0;
+    }
+    @include responsive(lg) {
+      font-size: 1.8rem;
       animation: color-change 10s infinite;
       padding: 0;
     }

@@ -21,6 +21,11 @@
     padding: 1rem;
     flex-direction: column;
   }
+  @include responsive(lg) {
+    padding: 1rem;
+    flex-direction: row;
+    height: 100vh;
+  }
 
   &__contents {
     max-width: 35rem;
@@ -30,6 +35,9 @@
       }
       @include responsive(sm) {
         text-align: center !important;
+      }
+      @include responsive(lg) {
+        text-align: left !important;
       }
     }
   }
@@ -42,6 +50,9 @@
     }
     @include responsive(sm) {
       font-size: 1.2rem;
+    }
+    @include responsive(lg) {
+      font-size: 1.9rem;
     }
   }
 
@@ -56,6 +67,9 @@
     @include responsive(sm) {
       font-size: 0.8rem;
     }
+    @include responsive(lg) {
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -66,6 +80,9 @@
   }
   @include responsive(md) {
     display: none;
+  }
+  @include responsive(lg) {
+    display: block;
   }
   .box-1 {
     width: 13px;

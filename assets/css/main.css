@@ -146,6 +146,13 @@ a {
   }
 }
 
+@media only screen and (min-width: 992px) {
+  .btn, .btn-primary, .btn-primary-outline {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
 .btn-primary {
   background-color: #4154f1;
   color: #fff;
@@ -192,6 +199,15 @@ a {
 @media only screen and (min-width: 576px) {
   .badge-multi {
     font-size: 1rem;
+    -webkit-animation: color-change 10s infinite;
+            animation: color-change 10s infinite;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .badge-multi {
+    font-size: 1.8rem;
     -webkit-animation: color-change 10s infinite;
             animation: color-change 10s infinite;
     padding: 0;
@@ -847,6 +863,18 @@ a {
   }
 }
 
+@media only screen and (min-width: 992px) {
+  .header {
+    padding: 0.75rem 2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header {
+    padding: 0.75rem 2rem;
+  }
+}
+
 .header__logo {
   color: #4154f1;
   -webkit-animation: color-change 10s infinite;
@@ -865,6 +893,18 @@ a {
   }
 }
 
+@media only screen and (min-width: 992px) {
+  .header__logo {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header__logo {
+    font-size: 22px;
+  }
+}
+
 .header .mobile-navbar {
   display: none;
   font-size: medium;
@@ -877,6 +917,18 @@ a {
 }
 
 @media only screen and (min-width: 576px) {
+  .header .mobile-navbar {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header .mobile-navbar {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
   .header .mobile-navbar {
     display: none;
   }
@@ -898,6 +950,22 @@ a {
   }
 }
 
+@media only screen and (min-width: 992px) {
+  .header--menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header--menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .header--menu__item > a {
   margin-right: 1rem;
   font-size: 13px;
@@ -915,6 +983,18 @@ a {
 @media only screen and (min-width: 576px) {
   .header--menu__item > a {
     font-size: 10px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header--menu__item > a {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header--menu__item > a {
+    font-size: 13px;
   }
 }
 
@@ -973,6 +1053,17 @@ a {
   }
 }
 
+@media only screen and (min-width: 992px) {
+  .hero-area {
+    padding: 1rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 100vh;
+  }
+}
+
 .hero-area__contents {
   max-width: 35rem;
 }
@@ -986,6 +1077,12 @@ a {
 @media only screen and (min-width: 576px) {
   .hero-area__contents .hero-btn-part {
     text-align: center !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .hero-area__contents .hero-btn-part {
+    text-align: left !important;
   }
 }
 
@@ -1003,6 +1100,12 @@ a {
 @media only screen and (min-width: 576px) {
   .hero-area__title {
     font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .hero-area__title {
+    font-size: 1.9rem;
   }
 }
 
@@ -1025,6 +1128,12 @@ a {
   }
 }
 
+@media only screen and (min-width: 992px) {
+  .hero-area__desc {
+    font-size: 0.8rem;
+  }
+}
+
 @media only screen and (max-width: 576px) {
   .background-shapes {
     display: none;
@@ -1034,6 +1143,12 @@ a {
 @media only screen and (min-width: 768px) {
   .background-shapes {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .background-shapes {
+    display: block;
   }
 }
 
@@ -1278,6 +1393,12 @@ a {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .about-area {
+    padding: 3.65rem 6rem;
+  }
+}
+
 .about-area__img {
   width: 35rem;
 }
@@ -1308,6 +1429,12 @@ a {
   }
 }
 
+@media only screen and (min-width: 576px) {
+  .about-area__contents h2 {
+    font-size: 2.2rem;
+  }
+}
+
 .about-area__contents p {
   line-height: 1.6;
   color: #e9e9e9;
@@ -1324,6 +1451,13 @@ a {
   .about-area__contents p {
     margin-top: 0.5rem;
     font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .about-area__contents p {
+    margin-top: 0.5rem;
+    font-size: 13px;
   }
 }
 
@@ -1349,6 +1483,12 @@ a {
   }
 }
 
+@media only screen and (min-width: 992px) {
+  .technology-area {
+    padding: 3rem 5rem;
+  }
+}
+
 .technology-area__heading {
   text-align: center;
 }
@@ -1367,6 +1507,12 @@ a {
 @media only screen and (min-width: 576px) {
   .technology-area__heading h2 {
     font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .technology-area__heading h2 {
+    font-size: 1.8rem;
   }
 }
 
@@ -1423,6 +1569,12 @@ a {
 @media only screen and (min-width: 576px) {
   .technology-area .technology-items .technology-item {
     padding: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .technology-area .technology-items .technology-item {
+    padding: 2rem;
   }
 }
 
@@ -1585,6 +1737,12 @@ a {
   }
 }
 
+@media only screen and (min-width: 992px) {
+  .cards {
+    padding: 1rem;
+  }
+}
+
 .cards-heading {
   text-align: center;
 }
@@ -1607,6 +1765,12 @@ a {
   }
 }
 
+@media only screen and (min-width: 576px) {
+  .cards-heading h2 {
+    font-size: 1.8rem !important;
+  }
+}
+
 .cards-heading p {
   margin-top: 10px;
   color: #e9e9e9;
@@ -1621,6 +1785,12 @@ a {
 @media only screen and (min-width: 576px) {
   .cards-heading p {
     font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .cards-heading p {
+    font-size: 15px;
   }
 }
 
@@ -1702,6 +1872,13 @@ a {
   }
 }
 
+@media only screen and (min-width: 992px) {
+  .deatils-card__content h5 {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
 .deatils-card__content p {
   font-size: 12px;
   color: gray;
@@ -1712,6 +1889,13 @@ a {
   .deatils-card__content p {
     font-size: 10px;
     line-height: 1.5;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .deatils-card__content p {
+    font-size: 13px;
+    line-height: 2;
   }
 }
 
@@ -1759,6 +1943,12 @@ a {
 @media only screen and (min-width: 576px) {
   .contact-area {
     padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .contact-area {
+    padding: 3rem 6rem;
   }
 }
 

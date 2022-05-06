@@ -17,6 +17,12 @@
   @include responsive(md) {
     padding: 0.5rem 1rem;
   }
+  @include responsive(lg) {
+    padding: 0.75rem 2rem;
+  }
+  @include responsive(xl) {
+    padding: 0.75rem 2rem;
+  }
 
   &__logo {
     color: map-get($map: $theme-colors, $key: primary);
@@ -26,6 +32,12 @@
     }
     @include responsive(sm) {
       font-size: 15px;
+    }
+    @include responsive(lg) {
+      font-size: 22px;
+    }
+    @include responsive(xl) {
+      font-size: 22px;
     }
   }
   .mobile-navbar {
@@ -37,6 +49,12 @@
     @include responsive(sm) {
       display: none;
     }
+    @include responsive(lg) {
+      display: none;
+    }
+    @include responsive(xl) {
+      display: none;
+    }
   }
 
   &--menu {
@@ -46,6 +64,12 @@
 
     @include responsive(xs) {
       display: none;
+    }
+    @include responsive(lg) {
+      display: flex;
+    }
+    @include responsive(xl) {
+      display: flex;
     }
 
     &__item > a {
@@ -59,6 +83,12 @@
       }
       @include responsive(sm) {
         font-size: 10px;
+      }
+      @include responsive(lg) {
+        font-size: 13px;
+      }
+      @include responsive(xl) {
+        font-size: 13px;
       }
 
       &:hover {

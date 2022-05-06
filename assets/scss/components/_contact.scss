@@ -8,6 +8,9 @@
   @include responsive(sm) {
     padding: 1rem;
   }
+  @include responsive(sm) {
+    padding: 3rem 6rem;
+  }
 
   .contact-card {
     display: flex;
