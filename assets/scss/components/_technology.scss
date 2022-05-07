@@ -1,33 +1,42 @@
 @use "../abstract/variable";
 @use "../abstract/mixins";
+
 .technology-area {
   padding: 3rem 5em;
+
   @include responsive(xs) {
     padding: 1rem;
     flex-direction: column;
   }
+
   @include responsive(sm) {
     padding: 1rem;
   }
+
   @include responsive(lg) {
     padding: 3rem 5rem;
   }
 
   &__heading {
     text-align: center;
+
     h2 {
       font-size: 2rem;
       text-transform: uppercase;
+
       @include responsive(xs) {
         font-size: 1.4rem;
       }
+
       @include responsive(sm) {
         font-size: 1.4rem;
       }
+
       @include responsive(lg) {
         font-size: 1.8rem;
       }
     }
+
     p {
       margin-top: 10px;
       color: gray;
@@ -39,10 +48,12 @@
     justify-content: center;
     align-items: center;
     padding: 3rem 1rem;
+
     @include responsive(xs) {
       flex-direction: column;
       padding: 1rem;
     }
+
     @include responsive(sm) {
       padding: 1rem;
     }
@@ -53,13 +64,17 @@
       max-width: 400px;
       position: relative;
       cursor: pointer;
+      z-index: -1;
       filter: grayscale(100%);
+
       @include responsive(xs) {
         padding: 2rem;
       }
+
       @include responsive(sm) {
         padding: 0;
       }
+
       @include responsive(lg) {
         padding: 2rem;
       }
@@ -71,10 +86,12 @@
 
       &_text {
         margin-top: 3rem;
+
         h5 {
           font-size: 1.3rem;
           font-weight: 600;
         }
+
         p {
           margin-top: 15px;
           color: grey;
@@ -82,9 +99,11 @@
           font-size: 14px;
         }
       }
+
       &:hover h5 {
         color: map-get($map: $theme-colors, $key: primary);
       }
+
       &:not(:last-child):before {
         position: absolute;
         top: 35%;
@@ -96,12 +115,14 @@
         font-family: "font Awesome 5 free";
         z-index: 1;
         color: #444;
+
         @include responsive(xs) {
           font-size: 1.5rem;
           content: "";
           top: 95%;
           left: 0;
         }
+
         @include responsive(sm) {
           font-size: 1.5rem;
           content: "";
@@ -114,14 +135,17 @@
         right: -10px;
         color: blue;
         transition: 1s;
+
         @include responsive(xs) {
           right: 0;
           top: 100.1%;
         }
+
         @include responsive(sm) {
           right: -10px;
         }
       }
+
       &:hover:last-child::after {
         position: absolute;
         top: 35%;
@@ -134,12 +158,14 @@
         content: "";
         font-family: "Font Awesome 6 Free";
         z-index: 1;
+
         @include responsive(xs) {
           font-size: 1.5rem;
           content: "";
           top: 100.1%;
           left: 0;
         }
+
         @include responsive(sm) {
           font-size: 1.5rem;
           content: "";
@@ -148,19 +174,23 @@
         }
       }
     }
+
     .technology-img {
       position: relative;
       height: 80px;
       width: 80px;
       margin: 0 auto;
+
       img {
         margin: 15px auto;
         width: 60px;
         height: 60px;
       }
+
       &:hover::after {
         animation: rotate 4s linear infinite;
       }
+
       &::after {
         position: absolute;
         width: 100%;

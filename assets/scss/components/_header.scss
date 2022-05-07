@@ -9,19 +9,24 @@
   border-bottom: 0.1px solid #efefef;
   background-color: #fff;
   text-transform: uppercase;
-  width:100%;
+  width: 100%;
+
   @include responsive(xs) {
     padding: 1rem;
   }
+
   @include responsive(sm) {
     padding: 0.5rem 1rem;
   }
+
   @include responsive(md) {
     padding: 0.5rem 1rem;
   }
+
   @include responsive(lg) {
     padding: 0.75rem 2rem;
   }
+
   @include responsive(xl) {
     padding: 0.75rem 2rem;
   }
@@ -29,31 +34,40 @@
   &__logo {
     color: map-get($map: $theme-colors, $key: primary);
     animation: color-change 10s infinite;
+
     @include responsive(xs) {
       font-size: 20px;
     }
+
     @include responsive(sm) {
       font-size: 15px;
     }
+
     @include responsive(lg) {
       font-size: 22px;
     }
+
     @include responsive(xl) {
       font-size: 22px;
     }
   }
+
   .mobile-navbar {
     display: none;
     font-size: medium;
+
     @include responsive(xs) {
       display: block;
     }
+
     @include responsive(sm) {
       display: none;
     }
+
     @include responsive(lg) {
       display: none;
     }
+
     @include responsive(xl) {
       display: none;
     }
@@ -67,20 +81,23 @@
     @include responsive(xs) {
       display: none;
       position: fixed;
-      top: 8.5%;
+      top: 6.5%;
       background-color: map-get($map: $theme-colors, $key: primary);
       left: 0;
       width: 100vw;
       height: 100vh;
       z-index: 1;
       transition: 500ms;
+
       &.show {
         display: block;
       }
     }
+
     @include responsive(lg) {
       display: flex;
     }
+
     @include responsive(xl) {
       display: flex;
     }
@@ -91,32 +108,39 @@
         text-align: center;
       }
     }
+
     &__item-btn {
       @include responsive(xs) {
         padding: 20px;
         text-align: center;
       }
     }
-    &__item > a {
+
+    &__item>a {
       margin-right: 1rem;
       font-size: 13px;
       text-transform: uppercase;
       font-weight: 700;
       color: map-get($map: $theme-colors, $key: dark);
+
       @include responsive(xs) {
         font-size: 10px;
         padding: 20px;
         color: #fff;
+
         &.active {
           color: #000 !important;
         }
       }
+
       @include responsive(sm) {
         font-size: 10px;
       }
+
       @include responsive(lg) {
         font-size: 13px;
       }
+
       @include responsive(xl) {
         font-size: 13px;
       }
@@ -125,9 +149,15 @@
         color: map-get($map: $theme-colors, $key: primary-hover);
         transition: 0.5s;
       }
+
       &.active {
         color: map-get($map: $theme-colors, $key: primary-hover);
       }
     }
   }
+}
+
+.header-fixed {
+  position: fixed;
+  box-shadow: rgba(195, 194, 252, 0.15) 0px 15px 25px, rgb(203, 199, 241) 0px 5px 10px;
 }
