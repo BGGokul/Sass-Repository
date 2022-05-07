@@ -66,6 +66,17 @@
 
     @include responsive(xs) {
       display: none;
+      position: fixed;
+      top: 7%;
+      background-color: map-get($map: $theme-colors, $key: primary);
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+      transition: 500ms;
+      &.show {
+        display: block;
+      }
     }
     @include responsive(lg) {
       display: flex;
@@ -74,6 +85,18 @@
       display: flex;
     }
 
+    &__item {
+      @include responsive(xs) {
+        padding: 20px;
+        text-align: center;
+      }
+    }
+    &__item-btn {
+      @include responsive(xs) {
+        padding: 20px;
+        text-align: center;
+      }
+    }
     &__item > a {
       margin-right: 1rem;
       font-size: 13px;
@@ -82,6 +105,11 @@
       color: map-get($map: $theme-colors, $key: dark);
       @include responsive(xs) {
         font-size: 10px;
+        padding: 20px;
+        color: #fff;
+        &.active {
+          color: #000 !important;
+        }
       }
       @include responsive(sm) {
         font-size: 10px;

@@ -950,6 +950,18 @@ a {
 @media only screen and (max-width: 576px) {
   .header--menu {
     display: none;
+    position: fixed;
+    top: 7%;
+    background-color: #4154f1;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    -webkit-transition: 500ms;
+    transition: 500ms;
+  }
+  .header--menu.show {
+    display: block;
   }
 }
 
@@ -969,6 +981,20 @@ a {
   }
 }
 
+@media only screen and (max-width: 576px) {
+  .header--menu__item {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .header--menu__item-btn {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
 .header--menu__item > a {
   margin-right: 1rem;
   font-size: 13px;
@@ -980,6 +1006,11 @@ a {
 @media only screen and (max-width: 576px) {
   .header--menu__item > a {
     font-size: 10px;
+    padding: 20px;
+    color: #fff;
+  }
+  .header--menu__item > a.active {
+    color: #000 !important;
   }
 }
 
