@@ -1,6 +1,5 @@
-const menuToggler = document.querySelector(".mobile-navbar");
-
-menuToggler.addEventListener("click", () => {
+//menu hide/show
+function menuHideShow() {
   const headerMenu = document.querySelector("ul.header--menu");
   const navIcon = document.querySelectorAll(".navIcon");
 
@@ -9,8 +8,14 @@ menuToggler.addEventListener("click", () => {
   navIcon.forEach((icon) => {
     icon.classList.toggle("d-none");
   });
-});
+}
 
+//mobile menu creation
+const menuToggler = document.querySelector(".mobile-navbar");
+
+menuToggler.addEventListener("click", menuHideShow);
+
+//header fix while scroll
 (function () {
   const headerDOM = document.getElementById("header");
   const navTopOffSet = headerDOM.clientHeight + 100;
@@ -25,6 +30,7 @@ menuToggler.addEventListener("click", () => {
   });
 })();
 
+//scroll Mmenu active color change
 function headerMenuActive() {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".header--menu__item>a");
@@ -47,4 +53,14 @@ function headerMenuActive() {
     });
   });
 }
+
+//moblie menu closing
+function mobileMenuClose() {
+  const navLinks = document.querySelectorAll(".header--menu>li>a");
+  for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click", menuHideShow);
+  }
+}
+
 headerMenuActive();
+mobileMenuClose();
