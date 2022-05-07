@@ -117,6 +117,18 @@ a {
   height: auto;
 }
 
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
 .btn, .btn-primary, .btn-primary-outline {
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
@@ -845,6 +857,7 @@ a {
   border-bottom: 0.1px solid #efefef;
   background-color: #fff;
   text-transform: uppercase;
+  width: 100%;
 }
 
 @media only screen and (max-width: 576px) {
@@ -868,7 +881,6 @@ a {
 @media only screen and (min-width: 992px) {
   .header {
     padding: 0.75rem 2rem;
-    position: relative;
   }
 }
 
@@ -951,7 +963,7 @@ a {
   .header--menu {
     display: none;
     position: fixed;
-    top: 7%;
+    top: 8.5%;
     background-color: #4154f1;
     left: 0;
     width: 100vw;

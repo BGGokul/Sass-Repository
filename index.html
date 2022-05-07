@@ -20,13 +20,16 @@
 
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header position-fixed">
         <div>
             <h2 class="header__logo">SASS</h2>
         </div>
         <div>
-            <div class="mobile-navbar"><i class="fa fa-bars"></i></div>
-            <ul class="header--menu show">
+            <div class="mobile-navbar">
+                <i class="navIcon fa fa-bars"></i>
+                <i class="navIcon fa fa-times d-none"></i>
+            </div>
+            <ul class="header--menu">
                 <li class="header--menu__item"><a href="#home" class="active">Home</a></li>
                 <li class="header--menu__item"><a href="#about">About</a></li>
                 <li class="header--menu__item"><a href="#technology">Technology</a></li>
