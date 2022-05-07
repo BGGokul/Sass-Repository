@@ -13,16 +13,23 @@
 }
 
 //display propertes
-.d-block{
-  display:block;
+.d-block {
+  display: block;
 }
-.d-none{
-  display:none;
+
+.d-none {
+  display: none;
 }
 
 //position proerties
-.position-fixed{  position:fixed;}
+.position-fixed {
+  position: fixed;
+}
 
+//box shadows
+.box-shadow {
+  box-shadow: rgba(195, 194, 252, 0.15) 0px 15px 25px, rgb(203, 199, 241) 0px 5px 10px;
+}
 
 // Buttons
 .btn {
@@ -37,14 +44,17 @@
   border: none;
   text-align: center;
   cursor: pointer;
+
   @include responsive(xs) {
     padding: 0.4rem;
     font-size: 10px;
   }
+
   @include responsive(sm) {
     padding: 0.4rem;
     font-size: 10px;
   }
+
   @include responsive(lg) {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
@@ -96,6 +106,7 @@
       animation: color-change 10s infinite;
       padding: 0;
     }
+
     @include responsive(lg) {
       font-size: 1.8rem;
       animation: color-change 10s infinite;
@@ -116,22 +127,28 @@ $spacing: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
 $directions: top, right, bottom, left, x, y;
 
 @each $space in $spacing {
+
   // for margins
   .m-#{$space} {
     margin: #{$space}rem !important;
   }
+
   @each $direction in $directions {
-    @if $direction == "x" {
+    @if $direction =="x" {
       .mx-#{$space} {
         margin-left: #{$space}rem !important;
         margin-right: #{$space}rem !important;
       }
-    } @else if $direction == "y" {
+    }
+
+    @else if $direction =="y" {
       .my-#{$space} {
         margin-top: #{$space}rem !important;
         margin-bottom: #{$space}rem !important;
       }
-    } @else {
+    }
+
+    @else {
       .m#{str-slice($direction,0,1)}-#{$space} {
         margin-#{$direction}: #{$space}rem !important;
       }
@@ -142,18 +159,23 @@ $directions: top, right, bottom, left, x, y;
   .p-#{$space} {
     padding: #{$space}rem !important;
   }
+
   @each $direction in $directions {
-    @if $direction == "x" {
+    @if $direction =="x" {
       .px-#{$space} {
         padding-left: #{$space}rem !important;
         padding-right: #{$space}rem !important;
       }
-    } @else if $direction == "y" {
+    }
+
+    @else if $direction =="y" {
       .py-#{$space} {
         padding-top: #{$space}rem !important;
         padding-bottom: #{$space}rem !important;
       }
-    } @else {
+    }
+
+    @else {
       .p#{str-slice($direction,0,1)}-#{$space} {
         padding-#{$direction}: #{$space}rem !important;
       }
