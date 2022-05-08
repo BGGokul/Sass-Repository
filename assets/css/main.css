@@ -2,14 +2,33 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   scroll-behavior: smooth;
-  scroll-margin-top: 50px;
+  scroll-margin-top: 55px;
 }
 
 a {
   text-decoration: none;
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    color: #42a5f5;
+  }
+  25% {
+    color: #ef5350;
+  }
+  50% {
+    color: #ff54a1;
+  }
+  75% {
+    color: #5c6bc0;
+  }
+  100% {
+    color: #34a853;
+  }
 }
 
 @keyframes color-change {
@@ -30,12 +49,43 @@ a {
   }
 }
 
-@keyframes rotate {
+@-webkit-keyframes rotate {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes bg-change {
+  0% {
+    background-color: #42a5f5;
+  }
+  25% {
+    background-color: #ef5350;
+  }
+  50% {
+    background-color: #ff54a1;
+  }
+  75% {
+    background-color: #5c6bc0;
+  }
+  100% {
+    background-color: #34a853;
   }
 }
 
@@ -81,7 +131,8 @@ a {
 }
 
 .box-shadow {
-  box-shadow: rgba(195, 194, 252, 0.15) 0px 15px 25px, #cbc7f1 0px 5px 10px;
+  -webkit-box-shadow: rgba(195, 194, 252, 0.15) 0px 15px 25px, #cbc7f1 0px 5px 10px;
+          box-shadow: rgba(195, 194, 252, 0.15) 0px 15px 25px, #cbc7f1 0px 5px 10px;
 }
 
 .btn, .btn-primary, .btn-primary-outline {
@@ -92,7 +143,9 @@ a {
   line-height: 1;
   font-weight: 600;
   display: inline-block;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: none;
   text-align: center;
   cursor: pointer;
@@ -137,6 +190,7 @@ a {
 .btn-primary-outline:hover {
   background-color: #4154f1;
   color: #fff;
+  -webkit-transition: 500ms;
   transition: 500ms;
 }
 
@@ -147,14 +201,16 @@ a {
 }
 
 .badge-multi {
-  animation: bg-change infinite 10s linear;
+  -webkit-animation: bg-change infinite 10s linear;
+          animation: bg-change infinite 10s linear;
   color: #fff;
 }
 
 @media only screen and (max-width: 576px) {
   .badge-multi {
     font-size: 1rem;
-    animation: color-change 10s infinite;
+    -webkit-animation: color-change 10s infinite;
+            animation: color-change 10s infinite;
     padding: 0;
   }
 }
@@ -162,7 +218,8 @@ a {
 @media only screen and (min-width: 576px) {
   .badge-multi {
     font-size: 1rem;
-    animation: color-change 10s infinite;
+    -webkit-animation: color-change 10s infinite;
+            animation: color-change 10s infinite;
     padding: 0;
   }
 }
@@ -170,7 +227,8 @@ a {
 @media only screen and (min-width: 992px) {
   .badge-multi {
     font-size: 1.8rem;
-    animation: color-change 10s infinite;
+    -webkit-animation: color-change 10s infinite;
+            animation: color-change 10s infinite;
     padding: 0;
   }
 }
@@ -781,6 +839,7 @@ a {
 }
 
 .line {
+  background: -webkit-gradient(linear, left top, right top, from(#ef5350), to(#4154f1));
   background: linear-gradient(to right, #ef5350, #4154f1);
   width: 4rem;
   height: 0.3rem;
@@ -791,19 +850,27 @@ a {
 @use "../abstract/variable";
 @use "../abstract/mixins";
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0.75rem 2rem;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 0.1px solid #efefef;
   background-color: #fff;
   text-transform: uppercase;
   width: 100%;
+  z-index: 1000;
 }
 
 @media only screen and (max-width: 576px) {
   .header {
     padding: 1rem;
+    height: 55px;
   }
 }
 
@@ -833,7 +900,8 @@ a {
 
 .header__logo {
   color: #4154f1;
-  animation: color-change 10s infinite;
+  -webkit-animation: color-change 10s infinite;
+          animation: color-change 10s infinite;
 }
 
 @media only screen and (max-width: 576px) {
@@ -890,21 +958,26 @@ a {
 }
 
 .header--menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media only screen and (max-width: 576px) {
   .header--menu {
     display: none;
     position: fixed;
-    top: 6.5%;
+    top: 55px;
     background-color: #4154f1;
     left: 0;
     width: 100vw;
     height: 100vh;
     z-index: 1;
+    -webkit-transition: 500ms;
     transition: 500ms;
   }
   .header--menu.show {
@@ -914,12 +987,16 @@ a {
 
 @media only screen and (min-width: 992px) {
   .header--menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .header--menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -977,6 +1054,7 @@ a {
 
 .header--menu__item > a:hover {
   color: #5969f3;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -986,22 +1064,33 @@ a {
 
 .header-fixed {
   position: fixed;
-  box-shadow: rgba(195, 194, 252, 0.15) 0px 15px 25px, #cbc7f1 0px 5px 10px;
+  -webkit-box-shadow: rgba(195, 194, 252, 0.15) 0px 15px 25px, #cbc7f1 0px 5px 10px;
+          box-shadow: rgba(195, 194, 252, 0.15) 0px 15px 25px, #cbc7f1 0px 5px 10px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 @use "../abstract/variable";
 @use "../abstract/mixins";
 .hero-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 3.65rem;
 }
 
 @media only screen and (max-width: 576px) {
   .hero-area {
     padding: 1rem;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 100vh;
   }
 }
@@ -1009,14 +1098,21 @@ a {
 @media only screen and (min-width: 576px) {
   .hero-area {
     padding: 3rem;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .hero-area {
     padding: 1rem;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 100vh;
   }
 }
@@ -1024,7 +1120,10 @@ a {
 @media only screen and (min-width: 992px) {
   .hero-area {
     padding: 1rem;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     height: 100vh;
   }
 }
@@ -1123,11 +1222,13 @@ a {
   border-radius: 40%;
   position: absolute;
   z-index: -1;
-  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
   top: 20%;
   background-color: transparent;
   border: 2px solid #4154f1;
-  animation: rotate linear 5s infinite;
+  -webkit-animation: rotate linear 5s infinite;
+          animation: rotate linear 5s infinite;
 }
 
 .background-shapes .box-2 {
@@ -1138,10 +1239,12 @@ a {
   border-radius: 40%;
   position: absolute;
   z-index: -1;
-  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
   background-color: transparent;
   border: 2px solid #34a853;
-  animation: rotate linear 5s infinite;
+  -webkit-animation: rotate linear 5s infinite;
+          animation: rotate linear 5s infinite;
 }
 
 .background-shapes .box-3 {
@@ -1152,10 +1255,12 @@ a {
   border-radius: 40%;
   position: absolute;
   z-index: -1;
-  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
   background-color: transparent;
   border: 2px solid #ffca28;
-  animation: rotate linear 5s infinite;
+  -webkit-animation: rotate linear 5s infinite;
+          animation: rotate linear 5s infinite;
 }
 
 .background-shapes .dot-1 {
@@ -1166,9 +1271,11 @@ a {
   border-radius: 50%;
   position: absolute;
   z-index: -1;
-  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
   background-color: #ef5350;
-  animation: rotate linear 5s infinite;
+  -webkit-animation: rotate linear 5s infinite;
+          animation: rotate linear 5s infinite;
 }
 
 .background-shapes .dot-2 {
@@ -1179,9 +1286,11 @@ a {
   border-radius: 50%;
   position: absolute;
   z-index: -1;
-  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
   background-color: #333;
-  animation: rotate linear 5s infinite;
+  -webkit-animation: rotate linear 5s infinite;
+          animation: rotate linear 5s infinite;
 }
 
 .background-shapes .dot-3 {
@@ -1192,9 +1301,11 @@ a {
   border-radius: 50%;
   position: absolute;
   z-index: -1;
-  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
   background-color: #ffca28;
-  animation: rotate linear 5s infinite;
+  -webkit-animation: rotate linear 5s infinite;
+          animation: rotate linear 5s infinite;
 }
 
 .background-shapes .dot-4 {
@@ -1205,9 +1316,11 @@ a {
   border-radius: 50%;
   position: absolute;
   z-index: -1;
-  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
   background-color: #ff54a1;
-  animation: rotate linear 5s infinite;
+  -webkit-animation: rotate linear 5s infinite;
+          animation: rotate linear 5s infinite;
 }
 
 .background-shapes .heart-1 {
@@ -1216,8 +1329,10 @@ a {
   color: #ff54a1;
   position: absolute;
   z-index: -1;
-  transform: rotate(360deg);
-  animation: rotate linear 5s infinite;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-animation: rotate linear 5s infinite;
+          animation: rotate linear 5s infinite;
 }
 
 .background-shapes .heart-2 {
@@ -1226,8 +1341,10 @@ a {
   color: #ffca28;
   position: absolute;
   z-index: -1;
-  transform: rotate(360deg);
-  animation: rotate linear 5s infinite;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-animation: rotate linear 5s infinite;
+          animation: rotate linear 5s infinite;
 }
 
 .background-shapes .heart-3 {
@@ -1236,8 +1353,10 @@ a {
   color: #ff54a1;
   position: absolute;
   z-index: -1;
-  transform: rotate(360deg);
-  animation: rotate linear 5s infinite;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-animation: rotate linear 5s infinite;
+          animation: rotate linear 5s infinite;
 }
 
 .background-shapes .heart-4 {
@@ -1246,8 +1365,10 @@ a {
   color: #ffca28;
   position: absolute;
   z-index: -1;
-  transform: rotate(360deg);
-  animation: rotate linear 5s infinite;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-animation: rotate linear 5s infinite;
+          animation: rotate linear 5s infinite;
 }
 
 .background-shapes .flower-1 {
@@ -1256,8 +1377,10 @@ a {
   color: #4154f1;
   position: absolute;
   z-index: -1;
-  transform: rotate(360deg);
-  animation: rotate linear 5s infinite;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-animation: rotate linear 5s infinite;
+          animation: rotate linear 5s infinite;
 }
 
 .background-shapes .flower-2 {
@@ -1266,8 +1389,10 @@ a {
   border-radius: 50%;
   position: absolute;
   z-index: -1;
-  transform: rotate(360deg);
-  animation: rotate linear 5s infinite;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-animation: rotate linear 5s infinite;
+          animation: rotate linear 5s infinite;
 }
 
 .background-shapes .flower-3 {
@@ -1276,8 +1401,10 @@ a {
   color: #ef5350;
   position: absolute;
   z-index: -1;
-  transform: rotate(360deg);
-  animation: rotate linear 5s infinite;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-animation: rotate linear 5s infinite;
+          animation: rotate linear 5s infinite;
 }
 
 .background-shapes .flower-4 {
@@ -1286,23 +1413,34 @@ a {
   color: #34a853;
   position: absolute;
   z-index: -1;
-  transform: rotate(360deg);
-  animation: rotate linear 5s infinite;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-animation: rotate linear 5s infinite;
+          animation: rotate linear 5s infinite;
 }
 
 @use "../abstract/variable";
 @use "../abstract/mixins";
 .about-area {
   background-color: #4154f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 3.65rem 6rem;
 }
 
 @media only screen and (max-width: 576px) {
   .about-area {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 1rem;
   }
 }
@@ -1396,7 +1534,10 @@ a {
 @media only screen and (max-width: 576px) {
   .technology-area {
     padding: 1rem;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1445,15 +1586,24 @@ a {
 }
 
 .technology-area .technology-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 3rem 1rem;
 }
 
 @media only screen and (max-width: 576px) {
   .technology-area .technology-items {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 1rem;
   }
 }
@@ -1470,8 +1620,8 @@ a {
   max-width: 400px;
   position: relative;
   cursor: pointer;
-  z-index: -1;
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 @media only screen and (max-width: 576px) {
@@ -1493,7 +1643,9 @@ a {
 }
 
 .technology-area .technology-items .technology-item:hover {
-  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: 500ms;
   transition: 500ms;
 }
 
@@ -1551,6 +1703,7 @@ a {
 .technology-area .technology-items .technology-item:hover:not(:last-child):before {
   right: -10px;
   color: blue;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 
@@ -1572,6 +1725,7 @@ a {
   top: 35%;
   right: 0;
   color: #ffca28;
+  -webkit-transition: 1s;
   transition: 1s;
   line-height: 1;
   font-size: 2rem;
@@ -1613,7 +1767,8 @@ a {
 }
 
 .technology-area .technology-items .technology-img:hover::after {
-  animation: rotate 4s linear infinite;
+  -webkit-animation: rotate 4s linear infinite;
+          animation: rotate 4s linear infinite;
 }
 
 .technology-area .technology-items .technology-img::after {
@@ -1705,14 +1860,23 @@ a {
 
 .details-cards {
   margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media only screen and (max-width: 576px) {
   .details-cards {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1740,7 +1904,7 @@ a {
 
 .details-cards .details-card .card-img {
   width: 100%;
-  height: 250px;
+  max-height: 300px;
   text-align: center;
 }
 
@@ -1751,7 +1915,9 @@ a {
 }
 
 .details-cards .details-card:hover {
-  box-shadow: 2px 2px 20px 5px rgba(45, 25, 117, 0.9);
+  -webkit-box-shadow: 2px 2px 20px 5px rgba(45, 25, 117, 0.9);
+          box-shadow: 2px 2px 20px 5px rgba(45, 25, 117, 0.9);
+  -webkit-transition: 500ms;
   transition: 500ms;
 }
 
@@ -1821,6 +1987,7 @@ a {
 }
 
 .more-course a:hover {
+  -webkit-transition: 500ms;
   transition: 500ms;
   color: #ffca28;
 }
@@ -1850,9 +2017,15 @@ a {
 }
 
 .contact-area .contact-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2rem;
   border-radius: 5px;
   background-color: #fff;
@@ -1861,7 +2034,10 @@ a {
 @media only screen and (max-width: 576px) {
   .contact-area .contact-card {
     padding: 1rem;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1882,7 +2058,9 @@ a {
 }
 
 .contact-area .contact-card .contact-form {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 @media only screen and (max-width: 576px) {
@@ -1913,6 +2091,7 @@ a {
 }
 
 .form-control:focus {
+  -webkit-transition: 50ms;
   transition: 50ms;
   border: 2px solid #4154f1;
 }
@@ -1969,6 +2148,7 @@ footer a {
 }
 
 footer a :hover {
+  -webkit-transition: 500ms;
   transition: 500ms;
   color: #ffca28;
 }

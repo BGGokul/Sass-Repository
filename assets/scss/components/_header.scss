@@ -10,9 +10,11 @@
   background-color: #fff;
   text-transform: uppercase;
   width: 100%;
+  z-index: 1000;
 
   @include responsive(xs) {
     padding: 1rem;
+    height: 55px;
   }
 
   @include responsive(sm) {
@@ -81,7 +83,7 @@
     @include responsive(xs) {
       display: none;
       position: fixed;
-      top: 6.5%;
+      top: 55px;
       background-color: map-get($map: $theme-colors, $key: primary);
       left: 0;
       width: 100vw;
@@ -116,7 +118,7 @@
       }
     }
 
-    &__item>a {
+    &__item > a {
       margin-right: 1rem;
       font-size: 13px;
       text-transform: uppercase;
@@ -159,5 +161,7 @@
 
 .header-fixed {
   position: fixed;
-  box-shadow: rgba(195, 194, 252, 0.15) 0px 15px 25px, rgb(203, 199, 241) 0px 5px 10px;
+  box-shadow: rgba(195, 194, 252, 0.15) 0px 15px 25px,
+    rgb(203, 199, 241) 0px 5px 10px;
+  transition: 500ms;
 }

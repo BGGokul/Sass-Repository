@@ -64,7 +64,6 @@
       max-width: 400px;
       position: relative;
       cursor: pointer;
-      z-index: -1;
       filter: grayscale(100%);
 
       @include responsive(xs) {

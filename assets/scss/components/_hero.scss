@@ -17,6 +17,7 @@
   @include responsive(sm) {
     padding: 3rem;
     flex-direction: column;
+    height: auto;
   }
 
   @include responsive(md) {
